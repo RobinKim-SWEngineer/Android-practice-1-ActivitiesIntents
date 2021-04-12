@@ -29,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendComment(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(COMMENT_MESSAGE, editTextComment.getText().toString());
+        String commentMessage = editTextComment.getText().toString();
+
+        intent.putExtra(COMMENT_MESSAGE, commentMessage);
+        editTextComment.getText().clear();
 
         startActivityForResult(intent, FEEDBACK_REQUEST);
     }
