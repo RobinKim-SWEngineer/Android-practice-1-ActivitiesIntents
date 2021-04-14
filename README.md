@@ -25,4 +25,4 @@ Here *int requestCode* works as a flag to identity the request upon receiving th
 
 - When restoring the saved states, it is recommended practice to do it onCreate() method. We provide the key and get the state back like `savedInstanceState.getInt(String key)`
 
-For more detail implementation of **Intent** for each step, please refer to the attached example.
+For more detail implementation of **Intent** for each step and **restoring instance state**, please refer to the attached example.
