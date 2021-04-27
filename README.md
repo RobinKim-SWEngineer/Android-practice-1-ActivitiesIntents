@@ -17,7 +17,7 @@ Here *int requestCode* works as a flag to identity the request upon receiving th
 - Upon `finish()` in the activity that was requested by the calling activity, the result data is available in the calling activity through :
 `onActivityResult(int requestCode, int resultCode, Intent data)`
 
-- Before `finish()` the requested activity, we set the resultCode and data (Intent) to send back in `setResult(int resultCode, Intent intent)`
+- Before `finish()` the requested activity, we set the resultCode and data (Intent) to send back in `setResult(int resultCode, Intent intent)`. Here the intent is new intent, which is *different from* the intent that started new (the requested) activity. 
 
 - Lifecyle **callback methods** can be overriden to change application default behavior. In the example we can check all the Logs for each callback method call.
 
