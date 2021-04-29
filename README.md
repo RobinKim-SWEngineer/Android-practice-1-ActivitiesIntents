@@ -23,6 +23,8 @@ Here *int requestCode* works as a flag to identity the request upon receiving th
 
 - `onSaveInstanceState(Bundle outState)` is called by the system before the activity is destroyed to save the states. We can preserve the current state like `outState.putInt(String key, int value)`. They are saved in `savedInstanceState` as ``Bundle`` objects.
 
+    >> However, `onSaveInstanceState(Bundle outState)` **will not be called** when user navigates back to previous activity **using back (arrow) button**. In such case `SharedPreferences` interface should be used to preserve the instance state.
+
 - When restoring the saved states, it is recommended practice to do it onCreate() method. We provide the key and get the state back like `savedInstanceState.getInt(String key)`
 
 For more detail implementation of **Intent** for each step and **restoring instance state**, please refer to the attached example.
